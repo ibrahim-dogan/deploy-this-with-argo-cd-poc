@@ -31,7 +31,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: ibrahim-dogan/argo-cd-poc  # Replace with your Deployment Repository
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.DEPLOYMENT_REPO_TOKEN }}
           path: argo-cd-poc
 
       # Step 5: Update the Kubernetes manifest with the new image tag

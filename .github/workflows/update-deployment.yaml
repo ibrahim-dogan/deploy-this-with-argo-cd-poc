@@ -37,8 +37,8 @@ jobs:
       # Step 5: Update the Kubernetes manifest with the new image tag
       - name: Update Kubernetes Manifest
         run: |
-          cd deployment-repo
-          sed -i "s|dedinededin/flask-app:.*|dedinededin/flask-app:$GITHUB_SHA|g" manifests/deployment.yaml
+          cd argo-cd-poc
+          sed -i "s|dedinededin/flask-app:.*|dedinededin/flask-app:$GITHUB_SHA|g" manifests/flask-app.yaml
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
           git add manifests/deployment.yaml

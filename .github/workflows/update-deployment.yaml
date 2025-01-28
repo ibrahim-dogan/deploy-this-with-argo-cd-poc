@@ -41,6 +41,6 @@ jobs:
           sed -i "s|dedinededin/flask-app:.*|dedinededin/flask-app:$GITHUB_SHA|g" manifests/flask-app.yaml
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git add manifests/deployment.yaml
+          git add manifests/flask-app.yaml
           git commit -m "Update image to $GITHUB_SHA"
           git push
